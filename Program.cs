@@ -32,17 +32,17 @@
             double secondlinelength = Math.Sqrt(Math.Pow(a2 - a1, 2) + Math.Pow(b2 - b1, 2));
             Console.WriteLine($"\nLength of Second Line is {secondlinelength}");
 
-            if (firstlinelength > secondlinelength)
+            if (secondlinelength.CompareTo(firstlinelength) < 0)
             {
-                Console.WriteLine("\nThe First Line is longer");
+                Console.WriteLine("\nThe First Line is longer than Second Line");
             }
-            else if (firstlinelength < secondlinelength)
+            else if (secondlinelength.CompareTo(firstlinelength) > 0)
             {
-                Console.WriteLine("\nThe Second Line is longer");
+                Console.WriteLine("\nThe Second Line is longer than First Line");
             }
             else
             {
-                Console.WriteLine("\nBoth are Equal");
+                Console.WriteLine("\nBoth Lines are Equal in Length");
             }
         }
     }
